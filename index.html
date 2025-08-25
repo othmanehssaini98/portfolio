@@ -1,121 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Othmane Hssaini | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#home">Othmane Hssaini</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<header id="home" class="vh-100 d-flex align-items-center text-center text-white bg-dark">
-  <div class="container">
-    <h1 class="display-3 fw-bold">Hi, I'm <span class="text-info">Othmane Hssaini</span></h1>
-    <p class="lead">Full Stack Developer | Java, Spring Boot, Angular, ETL</p>
-    <a href="assets/CV_Othmane_Hssaini.pdf" class="btn btn-info btn-lg mt-3">Download CV</a>
-  </div>
-</header>
-
-<!-- About -->
-<section id="about" class="py-5">
-  <div class="container text-center">
-    <img src="assets/profile.jpg" class="rounded-circle mb-3" width="150" alt="profile">
-    <h2>About Me</h2>
-    <p class="mt-3">Software Engineer specialized in Full Stack development (Java & Angular).  
-      Passionate about scalable systems, data engineering (ETL), and building modern user interfaces.  
-      Currently working at DXC Technology Morocco.</p>
-  </div>
-</section>
-
-<!-- Skills -->
-<section id="skills" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center">Skills</h2>
-    <div class="row text-center mt-4">
-      <div class="col-md-3"><h5>Backend</h5><p>Java, Spring Boot, Microservices, REST APIs</p></div>
-      <div class="col-md-3"><h5>Frontend</h5><p>Angular, HTML5, CSS3, Bootstrap</p></div>
-      <div class="col-md-3"><h5>Databases</h5><p>PostgreSQL, MySQL, Oracle, Elasticsearch</p></div>
-      <div class="col-md-3"><h5>ETL & BI</h5><p>Talend ETL, Power BI, Tableau</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Experience -->
-<section id="experience" class="py-5">
-  <div class="container">
-    <h2 class="text-center">Experience</h2>
-    <ul class="timeline mt-4">
-      <li><strong>Frontend Developer – DXC Technology (2025–Present)</strong><br>London Market Assurance – Angular & Cloud Migration</li>
-      <li><strong>Backend Developer – DXC Technology (2023–2025)</strong><br>SI-Gestion – Spring Boot, REST APIs</li>
-      <li><strong>ETL Developer – DXC Technology (2023–2025)</strong><br>Data migration with Talend & PostgreSQL</li>
-      <li><strong>Software Engineer Intern – DXC Technology (2023)</strong><br>Microservices migration & Angular dashboards</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center">Projects</h2>
-    <div class="row mt-4">
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <img src="assets/projet1.png" class="card-img-top" alt="project1">
-          <div class="card-body">
-            <h5 class="card-title">SI-Gestion</h5>
-            <p class="card-text">Migration vers microservices + ETL Talend.</p>
-          </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Othmane Hssaini</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <img src="assets/projet2.png" class="card-img-top" alt="project2">
-          <div class="card-body">
-            <h5 class="card-title">London Market Assurance</h5>
-            <p class="card-text">Frontend Angular + APIs REST + Cloud migration.</p>
-          </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="vh-100 d-flex align-items-center text-center text-white bg-dark">
+    <div class="container">
+      <h1 class="display-3 fw-bold" data-aos="fade-up">Hi, I'm <span class="text-info">Othmane Hssaini</span></h1>
+      <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">
+        Full Stack Developer | Java, Spring Boot, Angular, ETL
+      </p>
+      <div class="mt-4" data-aos="fade-up" data-aos-delay="400">
+        <a href="assets/HSSAINI_OTHMANE_CV_VF.pdf" class="btn btn-info btn-lg me-3">Download CV</a>
+        <a href="https://www.linkedin.com/in/othman-hssaini-8784881b8/"
+          class="btn btn-outline-light btn-lg me-2">LinkedIn</a>
+        <a href="https://github.com/othmanehssaini98/portfolio" class="btn btn-outline-light btn-lg">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <img src="assets/profile.jpg" class="rounded-circle mb-3" width="150" alt="profile" data-aos="fade-down">
+      <h2 data-aos="fade-up">About Me</h2>
+      <p class="mt-3" data-aos="fade-up" data-aos-delay="200">
+        Software Engineer specialized in Full Stack development (Java & Angular).
+        Passionate about scalable systems, data engineering (ETL), and building modern user interfaces.
+        Currently working at DXC Technology Morocco.
+      </p>
+
+      <!-- Soft skills -->
+      <div class="row justify-content-center mt-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-md-3 mb-2"><span class="badge bg-info">Teamwork</span></div>
+        <div class="col-md-3 mb-2"><span class="badge bg-success">Problem-solving</span></div>
+        <div class="col-md-3 mb-2"><span class="badge bg-warning text-dark">Adaptability</span></div>
+        <div class="col-md-3 mb-2"><span class="badge bg-primary">Responsibility</span></div>
+      </div>
+
+      <!-- Chiffres clés -->
+      <div class="row justify-content-center mt-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="col-md-3 mb-2">
+          <h3>2+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="col-md-3 mb-2">
+          <h3>5</h3>
+          <p>Major Projects</p>
+        </div>
+        <div class="col-md-3 mb-2">
+          <h3>10+</h3>
+          <p>Technologies Used</p>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center" data-aos="fade-up">Skills</h2>
+
+      <div class="row mt-4">
+        <!-- Backend -->
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <h5>Backend</h5>
+          <p>Java, Spring Boot, Microservices, REST APIs</p>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">Java</div>
+          </div>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 85%;">Spring Boot</div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-md-6 mb-4" data-aos="fade-left">
+          <h5>Frontend</h5>
+          <p>Angular, HTML5, CSS3, Bootstrap</p>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 90%;">Angular</div>
+          </div>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">HTML/CSS</div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+          <h5>Databases</h5>
+          <p>PostgreSQL, MySQL, Oracle, Elasticsearch</p>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;">PostgreSQL</div>
+          </div>
+        </div>
+
+        <!-- ETL & BI -->
+        <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+          <h5>ETL & BI</h5>
+          <p>Talend, Power BI, Tableau</p>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;">Talend ETL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-5">
+    <div class="container">
+      <h2 class="text-center" data-aos="fade-up">Experience</h2>
+
+      <div class="row mt-4">
+        <!-- Experience 1 -->
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Frontend Developer – DXC Technology (2025–Present)</h5>
+              <p class="card-text">London Market Assurance – Angular & Cloud Migration</p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/angular.png" alt="Angular" width="30" class="me-2">
+                <img src="assets/cloud.png" alt="Cloud" width="30">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="col-md-6 mb-4" data-aos="fade-left">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Backend Developer – DXC Technology (2023–2025)</h5>
+              <p class="card-text">SI-Gestion – Spring Boot, REST APIs</p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/java.png" alt="Java" width="30" class="me-2">
+                <img src="assets/spring.png" alt="Spring Boot" width="30">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">ETL Developer – DXC Technology (2023–2025)</h5>
+              <p class="card-text">Data migration with Talend & PostgreSQL</p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/talend.png" alt="Talend" width="30" class="me-2">
+                <img src="assets/postgresql.png" alt="PostgreSQL" width="30">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Software Engineer Intern – DXC Technology (2023)</h5>
+              <p class="card-text">Microservices migration & Angular dashboards</p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/programing.png" alt="Angular" width="30" class="me-2">
+                <img src="assets/microservices.png" alt="Microservices" width="30">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center" data-aos="fade-up">Projects</h2>
+      <div class="row mt-4">
+        <!-- Projet 1 -->
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <div class="card shadow-sm h-100 project-card">
+            <img src="assets/projet1.png" class="card-img-top" alt="SI-Gestion">
+            <div class="card-body">
+              <h5 class="card-title">SI-Gestion</h5>
+              <p class="card-text">Migration vers microservices + ETL Talend.</p>
+              <p><strong>Technologies :</strong> Java, Spring Boot, Talend, PostgreSQL</p>
+              <span class="badge bg-secondary">Accès restreint</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="col-md-6 mb-4" data-aos="fade-left">
+          <div class="card shadow-sm h-100 project-card">
+            <img src="assets/projet2.png" class="card-img-top" alt="London Market Assurance">
+            <div class="card-body">
+              <h5 class="card-title">London Market Assurance</h5>
+              <p class="card-text">Frontend Angular + APIs REST + Cloud migration.</p>
+              <p><strong>Technologies :</strong> Angular, REST APIs, Cloud</p>
+              <span class="badge bg-secondary">Accès restreint</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">Contact Me</h2>
+
+      <div class="row justify-content-center align-items-start">
+        <!-- Formulaire -->
+        <div class="col-lg-6 mb-4" data-aos="fade-right">
+          <div class="card bg-secondary bg-opacity-10 border-0 shadow-sm p-4">
+            <form action="https://formspree.io/f/xwpnkeql" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-info w-100">Envoyer</button>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div class="col-lg-4 text-center mt-4 mt-lg-0" data-aos="fade-left" data-aos-duration="1000">
+          <h5 class="mb-4">Connect with me</h5>
+          <div class="d-flex justify-content-center gap-4">
+            <a href="https://www.linkedin.com/in/othman-hssaini-8784881b8/" target="_blank"
+              class="social-icon text-white">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/othmanehssaini98/portfolio" target="_blank" class="social-icon text-white">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="mailto:hssainiothman98@gmail.com" class="social-icon text-white">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de confirmation -->
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Message envoyé !</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Merci ! Votre message a été envoyé avec succès.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- Contact -->
-<section id="contact" class="py-5 text-center">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:hssainiothman98@gmail.com">hssainiothman98@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/othman-hssaini">othman-hssaini</a></p>
-  </div>
-</section>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2025 Othmane Hssaini - Portfolio</p>
+  </footer>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-  <p>© 2025 Othmane Hssaini - Portfolio</p>
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200, // Durée de l'animation en ms
+      once: true       // Animation une seule fois au scroll
+    });
+  </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+  </script>
 </body>
+
+</html>
+</body>
+
 </html>

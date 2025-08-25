@@ -1,18 +1,129 @@
+/* ======================================== */
+/*                GLOBAL STYLES             */
+/* ======================================== */
 body {
   scroll-behavior: smooth;
 }
 
+/* ======================================== */
+/*                HERO SECTION               */
+/* ======================================== */
 header {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
               url('assets/bg.jpg') center/cover no-repeat;
 }
 
+header h1, header p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+
+/* Hero buttons hover effect */
+header .btn {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ======================================== */
+/*                TIMELINE / EXPERIENCE     */
+/* ======================================== */
 .timeline {
   list-style: none;
   padding: 0;
 }
+
 .timeline li {
   margin: 20px 0;
   padding-left: 20px;
   border-left: 3px solid #0dcaf0;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ======================================== */
+/*                CONTACT FORM               */
+/* ======================================== */
+#contact .card {
+  border-radius: 15px;
+}
+
+#contact .form-control {
+  border-radius: 10px;
+}
+
+#contact .btn-info {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#contact .btn-info:hover {
+  transform: translateY(-3px);
+}
+
+/* ======================================== */
+/*                SOCIAL ICONS               */
+/* ======================================== */
+.social-icon i {
+  font-size: 2rem;       
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover i {
+  transform: translateY(-5px) scale(1.2);
+  color: #0d6efd;   /* couleur bleue Bootstrap au survol */
+}
+
+/* ======================================== */
+/*                MODAL (POPUP)             */
+/* ======================================== */
+.modal-success .modal-content {
+  background-color: #28a745; /* vert succès */
+  color: white;
+  animation: bounceIn 0.5s;
+}
+
+.modal-error .modal-content {
+  background-color: #dc3545; /* rouge erreur */
+  color: white;
+  animation: shake 0.5s;
+}
+
+/* Animations pour modal */
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+/* Modal slide from top */
+.modal-content {
+  transform: translateY(-50px);
+  transition: transform 0.4s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
 }
