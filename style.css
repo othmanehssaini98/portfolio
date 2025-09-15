@@ -66,6 +66,7 @@ p, li, span, a, label {
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
   transition: all 0.3s ease;
   display: block;
+  margin: 0 auto;
 }
 
 .profile-oval:hover {
