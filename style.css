@@ -60,6 +60,18 @@ p, li, span, a, label {
   font-weight: 700;
 }
 
+.profile-oval {
+  border-radius: 50% / 60%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-oval:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+}
+
 /* Skills section improvements */
 #skills .progress {
   height: 8px;
